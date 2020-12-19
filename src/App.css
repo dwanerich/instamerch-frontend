@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Billabong';
+  src: local('./fonts/Billabong.ttf')
+}
+
+.App-style {
+  text-align: center;
+  font-family: 'Billabong';
+  height: 300px;
+  width: 900px;
+}
+
+.App-logo {
+  height: 18vmin;
+  pointer-events: none;
+  font-family: 'Billabong';
+  font-size: 75px;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.Login-component {
+    background-image: url('https://thumbs.gfycat.com/DecimalImmaterialHarborseal-size_restricted.gif');
+
+    height: 100%; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      font-size: 24px;
+
+}
+
+.card {
+  text-align: center;
+  border: rgb(49, 193, 250) solid 1.5px;
+  /* padding: 2rem; */
+  width: 300px;
+  height: 300px;
+  display: inline-grid;
+  margin: 1rem 1rem;
+  background-color: rgba(19, 18, 18, 0.575);
+  position: static;
+}
+
+
+
+
