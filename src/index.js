@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore, compose, applyMiddleware} from 'redux'
+import {reducer} from './redux/reducer'
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
 
-// import { Provider } from 'react-redux'
-
+const store = createStore(reducer, compose(
+  applyMiddleware(thunk),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+))
 
 
 

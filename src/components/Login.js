@@ -32,7 +32,7 @@ class Login extends React.Component {
             </form>
 
 
-                <br className="Login-component" /><br /><br />
+                <br className="Login-component" /><br />
 
         </div>
         )
