@@ -9,7 +9,7 @@ class MainContainer extends React.Component {
     state = {
         username: ""
     }
-
+    
     // here we set state for Username in the parent component
     setUsername = (username) => this.setState({username: username})
 

@@ -22,13 +22,13 @@ class Login extends React.Component {
     render() {
         return (
         <div>
-                <p className="Login-component" style={{ color: 'white' }}>The Most <strong>Un</strong>Official <strong>#FanHack </strong> App</p>
+                <p className="Login-component" style={{ color: 'white', fontSize:'40px' }}>The Most <strong>Un</strong>Official <strong>#FanHack </strong> App</p>
 
             <form onSubmit={this.onSubmit}>
                 <label>
-                 <input type="text" name="username" placeholder="Enter Username..." onChange={this.onChange} value={this.state.username} />
+                 <input type="text" style={{fontSize: '20px'}} name="username" placeholder="Enter Username..." onChange={this.onChange} value={this.state.username} />
                 </label>
-                <input type="submit" value="Login" />
+                    <input style={{ fontSize: '20px' }} type="submit" value="Login" />
             </form>
 
 

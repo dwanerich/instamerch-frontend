@@ -3,10 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// for store set up, thunk, chrome dev tools
 import { createStore, compose, applyMiddleware} from 'redux'
-import {reducer} from './redux/reducer'
+
+// activates redux
 import { Provider } from 'react-redux'
+
+// thunk add async actionability for Redux
 import thunk from 'redux-thunk'
+
+// enables router
+// import { BrowserRouter as Router } from 'react-router-dom'
+
+import { reducer } from './redux/reducer'
+
 
 const store = createStore(reducer, compose(
   applyMiddleware(thunk),
@@ -14,10 +25,14 @@ const store = createStore(reducer, compose(
 ))
 
 
-
-
 ReactDOM.render(
-    <App />,
+  <React.StrictMode>
+    {/* <Router> */}
+  <Provider store={store}>
+    <App />
+  </Provider>
+    {/* </Router> */}
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
