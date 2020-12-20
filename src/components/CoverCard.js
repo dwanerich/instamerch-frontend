@@ -1,11 +1,11 @@
 import React from 'react'
 
 const CoverCard = (props) => {
-    const { name, imgUrl } = props
+    const { title, imgUrl } = props
     return (
         <div className="card">
-            <img src={imgUrl} alt={name} /><br />
-            <p>{name}</p>
+            <img src={imgUrl} alt={title} /><br />
+            <p>{title}</p>
         </div>
     )
 }

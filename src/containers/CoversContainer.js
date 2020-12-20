@@ -1,6 +1,7 @@
 import React from 'react';
 import CoverCard from '../components/CoverCard'
 import Home from '../components/Header'
+import InputGroup from 'react-bootstrap/InputGroup';
 // import 'isomorphic-fetch';
 
 
@@ -23,7 +24,8 @@ class CoversContainer extends React.Component {
     
     state = {
         searchTerm: '',
-        songs: []
+        songs: [],
+        user: {}
 
     }
 
@@ -40,7 +42,42 @@ class CoversContainer extends React.Component {
 
     handleRenderFormSubmit = event => {
         event.preventDefault();
-        console.log("RIP DIANA")
+        // console.log("Create A Cover Instance + Render to the DOM")
+        
+        const newCover = {
+            title: event.target["title"].value,
+            img_src: event.target["img_src"].value,
+            user_id: this.state.user.id
+        }
+
+        console.log(newCover)
+    };
+
+//     Actions.addCover(newCover).then(actualNewCover => {
+//         console.log("actual: ", actualNewCover)
+// new Cover(actualNewCover)
+//     })
+//         .catch (error => alert(error))
+// }
+
+// Actions.fetchCovers()
+//     .then(actualCoverData => {
+//         renderAllCovers(actualCoverData)
+//     })
+
+//Render Helpers
+// function renderOnePlant(coverObj) {
+//     const cover = new Cover(coverObj)
+// }
+
+// function renderAllCovers(covers) {
+//     covers.forEach(renderOneCover)
+// }
+
+
+    handleSpotifyFormSubmit = event => {
+        event.preventDefault();
+        console.log("Spotify Fetch Request")
         // fetch(BASE_URL.concat(this.state.searchTerm))
         //     .then(res => res.json())
         //     .then(res => this.setState({ reviews: res.results }));
@@ -65,7 +102,7 @@ class CoversContainer extends React.Component {
                     />
                 
                 
-                    <img className='card'
+                <img className='card'
                         src="https://upload.wikimedia.org/wikipedia/en/5/53/Beyonce_-_Lemonade_%28Official_Album_Cover%29.png"
                         alt="new"
                     />
@@ -79,12 +116,18 @@ class CoversContainer extends React.Component {
 
 
                 
-                
-
                 {/* form for URL cover generator */}
+
+                <hr></hr>
+
+                <h2>Copy & Paste:</h2>
 
                 <form onSubmit={this.handleRenderFormSubmit}>
                     <label htmlFor="url-input" ></label>
+                    <input
+                        id="name-input" name="title" className="name-input"
+                        placeholder='Enter Name...'
+                        type="text" />
                     <input
                         id="img-input" name="img_src" className="img-input"
                         placeholder='Enter URL...'
@@ -95,8 +138,19 @@ class CoversContainer extends React.Component {
                     <button type="submit">Generate</button>
                 </form>
 
+                <h2>Quick Search:</h2> 
 
-
+                <form onSubmit={this.handleSpotifyFormSubmit}>
+                    <label htmlFor="search-input" ></label>
+                    <input
+                        id="keyword" name="keyword" className="img-input"
+                        placeholder='Album, Song or Artist Name'
+                        type="text"
+                        style={{ width: 200 }}
+                        onChange={this.handleRenderInputChange}
+                    />
+                    <button type="submit">Search</button>
+                </form>
 
 
 

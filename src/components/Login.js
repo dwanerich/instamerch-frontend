@@ -31,9 +31,8 @@ class Login extends React.Component {
                 <input type="submit" value="Login" />
             </form>
 
-                <strong>❤️  <a href="http://twitter.com/dwanerich"> stalk me here ✉️</a>   </strong>
 
-                <br className="Login-component" /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br className="Login-component" /><br /><br />
 
         </div>
         )
