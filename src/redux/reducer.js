@@ -10,10 +10,22 @@ const initialState = {
     }
 }
 
-
 export const reducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case "ALBUM_SEARCH":
-            console.log("SEARCHING FOR ALBUMS")
+            fetch('http://localhost:3000/search?query=' + action.payload, {
+                method: 'GET', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                // body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('RAILS API ALBUMS:', data);
+                })
+                .catch((error) => {
+                    console.error('ERROR:', error);
+                });
     }
 }

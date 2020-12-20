@@ -66,7 +66,7 @@ class CoversContainer extends React.Component {
                         placeholder='Song Title or Album Name'
                         type="text"
                         style={{ width: 250, fontSize: 15 }}
-                        onChange={() => this.props.albumSearch()}
+                        onChange={(event) => this.props.albumSearch(event.target.value)}
                     />
                     <button type="submit" style={{ fontSize: 15 }}>Search</button>
                 </form>
@@ -78,7 +78,7 @@ class CoversContainer extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        albumSearch: () => { dispatch({ type: "ALBUM_SEARCH", payload: "Juicy" }) }
+        albumSearch: (value) => { dispatch({ type: "ALBUM_SEARCH", payload: value }) }
     }
 }
 
