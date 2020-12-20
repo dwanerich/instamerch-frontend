@@ -5,6 +5,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import CoverCards from '../components/CoverCards'
 import { connect } from 'react-redux'
 import { likes } from '../actions/actionCreators'
+import SearchResultsContainer from './SearchResultsContainer'
+import { getAlbums } from '../actions/actionCreators'
 
 
 class CoversContainer extends React.Component {
@@ -20,20 +22,11 @@ class CoversContainer extends React.Component {
 
     }
 
-    handleSearchInputChange = event => {
-        this.setState({ searchTerm: event.target.value }, () => {
-            console.log(this.state)
-        });
-
-    }
 
 
     handleSpotifyFormSubmit = event => {
         event.preventDefault();
         console.log("Spotify Fetch Request")
-        // fetch(BASE_URL.concat(this.state.searchTerm))
-        //     .then(res => res.json())
-        //     .then(res => this.setState({ reviews: res.results }));
     };
 
 
@@ -66,10 +59,12 @@ class CoversContainer extends React.Component {
                         placeholder='Song Title or Album Name'
                         type="text"
                         style={{ width: 250, fontSize: 15 }}
-                        onChange={(event) => this.props.albumSearch(event.target.value)}
+                        onChange={(event) => this.props.onGetAlbums(event.target.value)}
                     />
                     <button type="submit" style={{ fontSize: 15 }}>Search</button>
                 </form>
+
+                <SearchResultsContainer albums={this.props.albums}/>
 
             </>
         )
@@ -78,9 +73,15 @@ class CoversContainer extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        albumSearch: (value) => { dispatch({ type: "ALBUM_SEARCH", payload: value }) }
+        onGetAlbums: (value) => { dispatch(getAlbums(value)) }
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        albums: state.albums
     }
 }
 
 
-export default connect(null, mapDispatchToProps )(CoversContainer)
+export default connect(mapStateToProps, mapDispatchToProps )(CoversContainer)
