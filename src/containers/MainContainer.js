@@ -9,7 +9,7 @@ class MainContainer extends React.Component {
     // here we set state for Username in the parent component
 
     render() {
-        return (<CoversContainer logOut={() => {}}/> )
+        return (<CoversContainer /> )
     }
 }
 

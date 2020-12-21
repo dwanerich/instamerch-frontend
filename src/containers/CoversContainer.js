@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { likes } from '../actions/actionCreators'
 import SearchResultsContainer from './SearchResultsContainer'
 import { getAlbums, addAlbum } from '../actions/actionCreators'
+import { withRouter} from 'react-router-dom'
 
 
 class CoversContainer extends React.Component {
@@ -15,13 +16,17 @@ class CoversContainer extends React.Component {
         console.log("fetch covers")
     }
 
+    logOut = () => {
+        this.props.history.push("/")
+    }
+
     handleSpotifyFormSubmit = event => {
         event.preventDefault();
         console.log("Spotify Fetch Request")
     };
 
     render() {
-        const { username, logOut } = this.props
+        const { username } = this.props
         console.log("###############")
         console.log(this.props)
         console.log("###############")
@@ -29,7 +34,7 @@ class CoversContainer extends React.Component {
             <>
                 <Home />
                 <p>welcome, <strong> {this.props.username}! </strong></p>
-                <button onClick={logOut}>Logout</button>
+                <button onClick={() => this.logOut()}>Logout</button>
 
                 <h1 className="Login-component" style={{ color: "white" }}> </h1>
 
@@ -76,4 +81,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps )(CoversContainer)
+export default connect(mapStateToProps, mapDispatchToProps )(withRouter(CoversContainer))
