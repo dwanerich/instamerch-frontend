@@ -46,7 +46,7 @@ class Login extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSetUsername: () => dispatch(setUsername)
+        onSetUsername: (value) => dispatch(setUsername(value))
     }
 }
 const mapStateToProps = (state) => {
