@@ -1,0 +1,25 @@
+import React from 'react'
+
+class SearchResults extends React.Component {
+
+
+    render() {
+        return (
+            <div>
+            {
+                this.props.albums && this.props.albums.length > 0 && this.props.albums.map((album, i) => {
+                    return (
+                        <div key={i}>
+                            <p>{album.name}</p>
+                            <img className="card" src={album.image}/>
+                        </div>
+                    )
+                })
+            }
+            </div>
+        )
+    }
+
+}
+
+export default SearchResults

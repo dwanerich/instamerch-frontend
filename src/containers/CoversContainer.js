@@ -2,7 +2,7 @@ import React from 'react';
 import CoverCard from '../components/CoverCard'
 import Home from '../components/Header'
 import InputGroup from 'react-bootstrap/InputGroup';
-import CoverCards from '../components/CoverCards'
+import CoverCards from '../components/SearchResults'
 import { connect } from 'react-redux'
 import { likes } from '../actions/actionCreators'
 import SearchResultsContainer from './SearchResultsContainer'

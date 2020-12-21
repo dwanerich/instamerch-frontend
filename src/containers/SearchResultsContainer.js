@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import SearchResults from '../components/SearchResults'
 
 class SearchResultsContainer extends React.Component {
     state = {
@@ -18,15 +19,7 @@ class SearchResultsContainer extends React.Component {
     render() {
         return (
             <div>
-                {this.state.albums.length > 0 && this.state.albums.map((album, i) => {
-                    return (
-                        <div key={i}>
-                            <div>{album.name}</div>
-                            <img className="card" src={album.image} />
-                        </div>
-                    )
-                })}
-
+                <SearchResults albums={this.state.albums} />
             </div>
         )
     }
