@@ -78,17 +78,13 @@ body, html {
 
 
 .small-card {
-  text-align: center;
   border: rgb(49, 193, 250) solid 1.5px;
-  /* padding: 2rem; */
   width: 100px;
   height: 100px;
-  display: inline;
   margin: 1rem 1rem;
-  background-color: rgba(19, 18, 18, 0.575);
-  position: static;
+  display: inline;
 }
 
-
-
-
+.album-cover-art {
+  display: inline;
+}

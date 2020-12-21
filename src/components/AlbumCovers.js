@@ -26,7 +26,10 @@ class AlbumCovers extends React.Component {
                 {
                     this.state.allAlbums && this.state.allAlbums["albums"].map((album, i) => {
                         return (
-                            <img src={album.image_url} className="small-card" key={i} />
+                            <div className="album-cover-art" key={i}>
+                            <img src={album.image_url} className="small-card"  />
+                            <p>liked by: { album.liked_by }</p>
+                            </div>
                         )
                     })
                 }
