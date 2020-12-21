@@ -21,7 +21,7 @@ class SearchResultsContainer extends React.Component {
         console.log("SRC", this.props)
         return (
             <div>
-                <SearchResults albums={this.state.albums} onAddAlbum={this.props.onAddAlbum}/>
+                <SearchResults albums={this.state.albums} onAddAlbum={this.props.onAddAlbum} username={this.props.username}/>
             </div>
         )
     }
@@ -36,7 +36,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
     return {
         albums: state.albums,
-        allAlbums: state.allAlbums
+        allAlbums: state.allAlbums,
     }
 }
 

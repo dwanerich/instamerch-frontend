@@ -3,6 +3,7 @@ import React from 'react'
 class SearchResults extends React.Component {
 
 
+
     render() {
             console.log("SR", this.props)
         return (
@@ -12,7 +13,7 @@ class SearchResults extends React.Component {
                     return (
                         <div key={i}>
                             <p>{album.name}</p>
-                            <img className="card" src={album.image} onClick={() => this.props.onAddAlbum({name: album.name, image_url: album.image})}/>
+                            <img className="card" src={album.image} onClick={() => this.props.onAddAlbum({name: album.name, image_url: album.image, liked_by: this.props.username})}/>
                         </div>
                     )
                 })

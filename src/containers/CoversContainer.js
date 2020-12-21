@@ -58,7 +58,7 @@ class CoversContainer extends React.Component {
                     <button type="submit" style={{ fontSize: 15 }}>Search</button>
                 </form>
 
-                <SearchResultsContainer albums={this.props.albums} onAddAlbum={this.props.onAddAlbum}/>
+                <SearchResultsContainer albums={this.props.albums} onAddAlbum={this.props.onAddAlbum} username={this.props.username}/>
 
             </>
         )
