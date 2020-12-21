@@ -15,15 +15,6 @@ class CoversContainer extends React.Component {
         console.log("fetch covers")
     }
 
-    state = {
-        searchTerm: '',
-        songs: [],
-        user: {}
-
-    }
-
-
-
     handleSpotifyFormSubmit = event => {
         event.preventDefault();
         console.log("Spotify Fetch Request")
