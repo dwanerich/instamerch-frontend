@@ -7,6 +7,9 @@ export const reducer = (state = initialState, action) => {
         case "ALBUM_SEARCH":
             console.log("reducing")
             return { ...state, albums: action.payload }
+        case "ADD_ALBUM":
+            console.log("adding album")
+            return { ...state }
         default:
             return state;
     }

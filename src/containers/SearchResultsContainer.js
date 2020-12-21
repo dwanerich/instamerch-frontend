@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import SearchResults from '../components/SearchResults'
+import { addAlbum } from '../actions/actionCreators'
 
 class SearchResultsContainer extends React.Component {
     state = {
@@ -19,7 +20,7 @@ class SearchResultsContainer extends React.Component {
     render() {
         return (
             <div>
-                <SearchResults albums={this.state.albums} />
+                <SearchResults albums={this.state.albums} onAddAlbum={this.props.onAddAlbum}/>
             </div>
         )
     }
@@ -27,6 +28,7 @@ class SearchResultsContainer extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        onAddAlbum: (album) => { dispatch(addAlbum(album)) },
     }
 }
 

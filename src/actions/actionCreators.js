@@ -22,3 +22,24 @@ export const getAlbums = (query) => {
             });
     }
 }
+
+export const addAlbum = (album) => {
+    console.log("album", album)
+    console.log("inside getAlbums")
+    return (dispatch) => {
+        fetch('http://localhost:3000/albums?' + 'name=' + album.name + '&image_url=' + album.image_url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('All Albums', data);
+                dispatch( { type: "ADD_ALBUM", payload: data})
+            })
+            .catch((error) => {
+                console.error('ERROR:', error);
+            });
+    }
+}

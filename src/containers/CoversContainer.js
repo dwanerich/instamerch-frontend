@@ -6,7 +6,7 @@ import CoverCards from '../components/SearchResults'
 import { connect } from 'react-redux'
 import { likes } from '../actions/actionCreators'
 import SearchResultsContainer from './SearchResultsContainer'
-import { getAlbums } from '../actions/actionCreators'
+import { getAlbums, addAlbum } from '../actions/actionCreators'
 
 
 class CoversContainer extends React.Component {
@@ -19,8 +19,6 @@ class CoversContainer extends React.Component {
         event.preventDefault();
         console.log("Spotify Fetch Request")
     };
-
-
 
     render() {
         const { username, logOut } = this.props
@@ -55,7 +53,7 @@ class CoversContainer extends React.Component {
                     <button type="submit" style={{ fontSize: 15 }}>Search</button>
                 </form>
 
-                <SearchResultsContainer albums={this.props.albums}/>
+                <SearchResultsContainer albums={this.props.albums} onAddAlbum={this.addAlbum}/>
 
             </>
         )
@@ -64,7 +62,8 @@ class CoversContainer extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onGetAlbums: (value) => { dispatch(getAlbums(value)) }
+        onGetAlbums: (value) => { dispatch(getAlbums(value)) },
+        onAddAlbum: (value) => { dispatch(addAlbum(value)) },
     }
 }
 
