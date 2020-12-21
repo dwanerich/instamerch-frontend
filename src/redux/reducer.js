@@ -1,5 +1,7 @@
 const initialState = {
-    albums: []
+    albums: [],
+    allAlbums: { albums: []},
+    username: ""
 }
 
 export const reducer = (state = initialState, action) => {
@@ -9,7 +11,10 @@ export const reducer = (state = initialState, action) => {
             return { ...state, albums: action.payload }
         case "ADD_ALBUM":
             console.log("adding album")
-            return { ...state }
+            return { ...state, allAlbums: action.payload }
+        case "SET_USERNAME":
+            console.log("setting username in REDUCER")
+            return { ...state, username: action.payload }
         default:
             return state;
     }

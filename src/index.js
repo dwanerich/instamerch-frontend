@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // for store set up, thunk, chrome dev tools
-import { createStore, compose, applyMiddleware} from 'redux'
+import { createStore, compose, applyMiddleware } from 'redux'
 
 // activates redux
 import { Provider } from 'react-redux'
@@ -14,7 +14,7 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 
 // enables router
-// import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import { reducer } from './redux/reducer'
 
@@ -27,11 +27,11 @@ const store = createStore(reducer, compose(
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Router> */}
-  <Provider store={store}>
-    <App />
-  </Provider>
-    {/* </Router> */}
+    <Router>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

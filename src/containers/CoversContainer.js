@@ -1,8 +1,8 @@
 import React from 'react';
-import CoverCard from '../components/CoverCard'
+import CoverCard from '../components/AlbumCovers'
 import Home from '../components/Header'
 import InputGroup from 'react-bootstrap/InputGroup';
-import CoverCards from '../components/SearchResults'
+import AlbumCovers from '../components/AlbumCovers'
 import { connect } from 'react-redux'
 import { likes } from '../actions/actionCreators'
 import SearchResultsContainer from './SearchResultsContainer'
@@ -22,20 +22,20 @@ class CoversContainer extends React.Component {
 
     render() {
         const { username, logOut } = this.props
+        console.log("###############")
         console.log(this.props)
+        console.log("###############")
         return (
             <>
                 <Home />
-                <p>Welcome, <strong> {username}! </strong></p>
+                <p>welcome, <strong> {this.props.username}! </strong></p>
                 <button onClick={logOut}>Logout</button>
 
                 <h1 className="Login-component" style={{ color: "white" }}> </h1>
 
-                <CoverCards />
+                <AlbumCovers allAlbums={this.props.allAlbums} onAddAlbum={this.props.onAddAlbum} />
 
 
-
-                {/* form for URL cover generator */}
 
                 <hr></hr>
 
@@ -53,7 +53,7 @@ class CoversContainer extends React.Component {
                     <button type="submit" style={{ fontSize: 15 }}>Search</button>
                 </form>
 
-                <SearchResultsContainer albums={this.props.albums} onAddAlbum={this.addAlbum}/>
+                <SearchResultsContainer albums={this.props.albums} onAddAlbum={this.props.onAddAlbum}/>
 
             </>
         )
@@ -69,7 +69,9 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
     return {
-        albums: state.albums
+        albums: state.albums,
+        allAlbums: state.allAlbums,
+        username: state.username
     }
 }
 

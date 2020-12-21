@@ -4,7 +4,7 @@ const API = 'http://localhost:3000'
 export const likes = () => ({ type: 'INCREASE_COUNT' })
 
 export const getAlbums = (query) => {
-    console.log("inside getAlbums")
+    console.log(query)
     return (dispatch) => {
         fetch('http://localhost:3000/search?query=' + query, {
             method: 'GET',
@@ -41,5 +41,11 @@ export const addAlbum = (album) => {
             .catch((error) => {
                 console.error('ERROR:', error);
             });
+    }
+}
+export const setUsername = (value) => {
+    console.log("Setting username in action creator")
+    return (dispatch) => {
+        dispatch({ type: "SET_USERNAME", payload: value })
     }
 }

@@ -18,6 +18,7 @@ class SearchResultsContainer extends React.Component {
     }
 
     render() {
+        console.log("SRC", this.props)
         return (
             <div>
                 <SearchResults albums={this.state.albums} onAddAlbum={this.props.onAddAlbum}/>
@@ -34,7 +35,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
     return {
-        albums: state.albums
+        albums: state.albums,
+        allAlbums: state.allAlbums
     }
 }
 

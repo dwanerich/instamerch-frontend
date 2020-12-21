@@ -4,6 +4,7 @@ class SearchResults extends React.Component {
 
 
     render() {
+            console.log("SR", this.props)
         return (
             <div>
             {
