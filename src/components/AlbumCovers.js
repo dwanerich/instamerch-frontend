@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory, withRouter } from "react-router-dom";
 import { connect } from 'react-redux'
-import { getAllAlbums } from '../actions/actionCreators'
+import { getAllAlbums, onDeleteAlbum } from '../actions/actionCreators'
 import  AlbumCover  from './AlbumCover'
 
 class AlbumCovers extends React.Component {
@@ -27,7 +27,7 @@ class AlbumCovers extends React.Component {
                 {
                     this.state.allAlbums && this.state.allAlbums["albums"].map((album, i) => {
                         return (
-                            <AlbumCover album={album} key={i}/>
+                            <AlbumCover album={album} key={i} onDeleteAlbum={this.props.onDeleteAlbum}/>
 
                         )
                     })
@@ -38,7 +38,8 @@ class AlbumCovers extends React.Component {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        onGetAllAlbums: () => dispatch(getAllAlbums())
+        onGetAllAlbums: () => dispatch(getAllAlbums()),
+        onDeleteAlbum: (album) => dispatch(onDeleteAlbum(album))
     }
 }
 const mapStateToProps = (state) => {

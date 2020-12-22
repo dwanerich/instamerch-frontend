@@ -15,6 +15,9 @@ export const reducer = (state = initialState, action) => {
             return { ...state, allAlbums: action.payload }
         case "GET_ALL_ALBUMS":
             return { ...state, allAlbums: action.payload }
+        case "DELETE_ALBUM":
+            console.log("DELETING ALBUM IN REDUCER")
+            return { ...state, allAlbums: action.payload }
         case "SET_USERNAME":
             console.log("setting username in REDUCER")
             return { ...state, username: action.payload }

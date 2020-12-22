@@ -65,3 +65,22 @@ export const getAllAlbums = () => {
             });
     }
 }
+
+export const onDeleteAlbum = (album) => {
+    console.log("ALBUMMMMMMMMMMMMMM", album)
+    return (dispatch) => {
+        fetch('http://localhost:3000/albums?' + 'album_id=' + album.id, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                dispatch({ type: "DELETE_ALBUM", payload: data })
+            })
+            .catch((error) => {
+                console.error('ERROR:', error);
+            });
+    }
+}

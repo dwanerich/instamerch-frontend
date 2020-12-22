@@ -12,10 +12,6 @@ import { withRouter} from 'react-router-dom'
 
 class CoversContainer extends React.Component {
 
-    componentDidMount() {
-        console.log("fetch covers")
-    }
-
     logOut = () => {
         this.props.history.push("/")
     }
