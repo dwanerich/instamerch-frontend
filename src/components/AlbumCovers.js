@@ -2,6 +2,7 @@ import React from 'react'
 import { useHistory, withRouter } from "react-router-dom";
 import { connect } from 'react-redux'
 import { getAllAlbums } from '../actions/actionCreators'
+import  AlbumCover  from './AlbumCover'
 
 class AlbumCovers extends React.Component {
     state = {
@@ -26,10 +27,8 @@ class AlbumCovers extends React.Component {
                 {
                     this.state.allAlbums && this.state.allAlbums["albums"].map((album, i) => {
                         return (
-                            <div className="album-cover-art" key={i}>
-                            <img src={album.image_url} className="small-card"  />
-                            <p>liked by: { album.liked_by }</p>
-                            </div>
+                            <AlbumCover album={album} key={i}/>
+
                         )
                     })
                 }
