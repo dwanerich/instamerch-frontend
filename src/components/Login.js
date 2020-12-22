@@ -1,6 +1,6 @@
 import React from 'react'
 import '../fonts/Billabong.ttf'
-import { useHistory, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { setUsername } from "../actions/actionCreators"
 import { connect } from 'react-redux'
 

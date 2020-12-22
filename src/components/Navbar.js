@@ -20,11 +20,12 @@ const Navbar = (props) => {
     }
 
     return (
-        <div className="navbar"      >
-            <a href="#" onClick={(event) => handleHomeClick(event)}>Home </a>
-            <a href="#" onClick={(event) => handleBoardClick(event)}>Board </a>
-            <a href="#" onClick={(event) => handleAboutPageClick(event)}>About </a>
+        <div className="mr-auto" variant="dark" bg="dark"     >
+            <a href="/" onClick={(event) => handleHomeClick(event)}>Home </a>
+            <a href="/" onClick={(event) => handleBoardClick(event)}>Board </a>
+            <a href="/" onClick={(event) => handleAboutPageClick(event)}>About </a>
         </div>
+        
     )
 }
 

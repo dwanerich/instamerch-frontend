@@ -1,10 +1,7 @@
 import React from 'react';
-import CoverCard from '../components/AlbumCovers'
 import Home from '../components/Header'
-import InputGroup from 'react-bootstrap/InputGroup';
 import AlbumCovers from '../components/AlbumCovers'
 import { connect } from 'react-redux'
-import { likes } from '../actions/actionCreators'
 import SearchResultsContainer from './SearchResultsContainer'
 import { getAlbums, addAlbum } from '../actions/actionCreators'
 import { withRouter} from 'react-router-dom'
@@ -18,14 +15,10 @@ class CoversContainer extends React.Component {
 
     handleSpotifyFormSubmit = event => {
         event.preventDefault();
-        console.log("Spotify Fetch Request")
     };
 
     render() {
-        const { username } = this.props
-        console.log("###############")
-        console.log(this.props)
-        console.log("###############")
+   
         return (
             <>
                 <Home />

@@ -10,7 +10,7 @@
 .App-style {
   text-align: center;
   font-family: 'Billabong';
-  height: 300px;
+  /* height: 300px; */
   width: 900px;
 }
 
@@ -78,13 +78,24 @@ body, html {
 
 
 .small-card {
-  border: rgb(49, 193, 250) solid 1.5px;
-  width: 100px;
-  height: 100px;
-  margin: 1rem 1rem;
+  width: 30px;
+  height: 300px;
   display: inline;
 }
 
-.album-cover-art {
-  display: inline;
+.small-card img {
+  width: 200px;
+  border: rgb(49, 193, 250) solid 1.5px;
+
+}
+
+.liked-by-text {
+  position: relative;
+  right: 250px;
+  top: 140px;
+}
+
+.Footer {
+  position: relative;
+  top: 150px
 }

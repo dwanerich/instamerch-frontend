@@ -1,9 +1,10 @@
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import MainContainer from './containers/MainContainer'
 import HomePage from './components/HomePage'
 import Navbar from './components/Navbar'
 import AboutPage from './components/AboutPage'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/board" component={MainContainer} exact />
         <Route path="/" component={HomePage} exact />
       </Switch>
-  
+      <Footer />
     </div>
   );
 }

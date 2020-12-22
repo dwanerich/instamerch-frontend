@@ -1,4 +1,3 @@
-const API = 'http://localhost:3000'
 
 export const likes = () => ({ type: 'INCREASE_COUNT' })
 
@@ -25,7 +24,7 @@ export const getAlbums = (query) => {
 export const addAlbum = (album) => {
     console.log("ALBUMMMMMMMMMMMMMM", album)
     return (dispatch) => {
-        fetch('http://localhost:3000/albums?' + 'name=' + album.name + '&image_url=' + album.image_url + '&liked_by=' + album.liked_by, {
+        fetch('http://localhost:3000/albums?name=' + album.name + '&image_url=' + album.image_url + '&liked_by=' + album.liked_by, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -69,7 +68,7 @@ export const getAllAlbums = () => {
 export const onDeleteAlbum = (album) => {
     console.log("ALBUMMMMMMMMMMMMMM", album)
     return (dispatch) => {
-        fetch('http://localhost:3000/albums?' + 'album_id=' + album.id, {
+        fetch('http://localhost:3000/albums?album_id=' + album.id, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
 import Login from '../components/Login'
 
 class HomePage extends React.Component {
@@ -13,7 +12,7 @@ class HomePage extends React.Component {
     render() {
         return (
             <div>
-                <Header /> <Login setUsername={this.setUsername} /> <Footer />
+                <Header /> <Login setUsername={this.setUsername} />
             </div>
         )
     }

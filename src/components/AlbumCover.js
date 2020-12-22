@@ -2,10 +2,10 @@ import React from 'react'
 
 const AlbumCover = (props) => {
     return (
-        <div className="album-cover-art" onClick={() => props.onDeleteAlbum(props.album)}>
-            <img src={props.album.image_url} className="small-card" />
-            <p>liked by: {props.album.liked_by}</p>
-        </div>
+        <span className="album-cover-art small-card" onClick={() => props.onDeleteAlbum(props.album)}>
+            <img src={props.album.image_url} alt={props.album.name} />
+            <span className="liked-by-text">liked by: {props.album.liked_by}</span>
+        </span>
     )
 }
 

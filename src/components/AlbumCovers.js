@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux'
 import { getAllAlbums, onDeleteAlbum } from '../actions/actionCreators'
 import  AlbumCover  from './AlbumCover'
@@ -27,7 +27,7 @@ class AlbumCovers extends React.Component {
                 {
                     this.state.allAlbums && this.state.allAlbums["albums"].map((album, i) => {
                         return (
-                            <AlbumCover album={album} key={i} onDeleteAlbum={this.props.onDeleteAlbum}/>
+                            <AlbumCover album={album} key={i} onDeleteAlbum={this.props.onDeleteAlbum} className="inline"/>
 
                         )
                     })
