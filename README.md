@@ -17,14 +17,15 @@ Prerequisites:
 Text Editor ie: Atom, VS Code.
 
 Built With:
-Ruby on Rails API - Framework
-Rspotify Gem (Handles Spotify API request)
-React.js Libraries
-Redux
-React-Redux
-SQLite
-HTML 5
-CSS
+-Ruby on Rails API - Framework
+-Rspotify Gem (Spotify API request handler)
+-React.js 
+-Redux
+-React-Redux
+-Redux-Thunk (Middleware)
+-SQLite
+-HTML 5
+-CSS
 
 
 Test App:
@@ -39,22 +40,16 @@ Run rails s in your terminal from backend directory and copy & paste localhost:3
 Building Blocks:
 
 Ruby on Rails
--generated albums model, controller & routes on Rails backend
+-generated albums model, controller & routes on Rails backend also Spotify search Run Model via Rspotify Gem.
 
 React / Redux
 -index.js
 -App.js
--
--create new plant function
--render new plant
--delete plant
--react to plant with 3 options
--function newPlant {}
--function renderPlant {}
--funtion renderPlants {}
--function plantReaction {}
--fucntion deletePlant {}
-
+-App.css
+-Containers
+-Components
+-Reducer
+-ActionCreators
 
 Contributing:
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
@@ -67,4 +62,3 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 Acknowledgments:
 Shout out to my Flatiron School technical lead Nicky Dover & The Pandemic Cohort.
-

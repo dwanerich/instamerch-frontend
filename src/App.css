@@ -59,20 +59,20 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-      font-size: 24px;
+    font-size: 24px;
 
 }
 
 .card {
-  text-align: center;
+  text-align:center;
   border: rgb(49, 193, 250) solid 1.5px;
-  /* padding: 2rem; */
   width: 300px;
   height: 300px;
   display: inline-grid;
   margin: 1rem 1rem;
   background-color: rgba(19, 18, 18, 0.575);
   position: static;
+  
 }
 
 
@@ -80,12 +80,15 @@ body, html {
 .small-card {
   width: 30px;
   height: 300px;
-  display: inline;
+  text-align:center;
+  position: static;
+  display: -moz-inline-grid;
 }
 
 .small-card img {
   width: 200px;
   border: rgb(49, 193, 250) solid 1.5px;
+  
 
 }
 

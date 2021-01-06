@@ -5,6 +5,16 @@ import { setUsername } from "../actions/actionCreators"
 import { connect } from 'react-redux'
 
 class Login extends React.Component {
+
+    // constructor(props) {
+        //super and state and stuffs
+        // super(props)
+        // this.state = {
+        //     username: ""
+        // }
+        // this.onChange = this.onChange.bind(this);
+    // }
+    
     state = {
         username: ""
     }

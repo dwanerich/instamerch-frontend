@@ -1,6 +1,13 @@
 
 export const likes = () => ({ type: 'INCREASE_COUNT' })
 
+export const setUsername = (value) => {
+    console.log("Setting username in action creator")
+    return (dispatch) => {
+        dispatch({ type: "SET_USERNAME", payload: value })
+    }
+}
+
 export const getAlbums = (query) => {
     console.log(query)
     return (dispatch) => {
@@ -38,12 +45,6 @@ export const addAlbum = (album) => {
             .catch((error) => {
                 console.error('ERROR:', error);
             });
-    }
-}
-export const setUsername = (value) => {
-    console.log("Setting username in action creator")
-    return (dispatch) => {
-        dispatch({ type: "SET_USERNAME", payload: value })
     }
 }
 
