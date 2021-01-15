@@ -15,10 +15,10 @@
 }
 
 .App-logo {
-  height: 18vmin;
+  margin-top: 5rem;
+  height: 30vmin;
   pointer-events: none;
   font-family: 'Billabong';
-  font-size: 75px;
 }
 
 
@@ -102,3 +102,4 @@ body, html {
   position: relative;
   top: 150px
 }
+

@@ -3,9 +3,9 @@ import Header from '../components/Header'
 import Login from '../components/Login'
 
 class HomePage extends React.Component {
-    state = {
-        username: ""
-    }
+    // state = {
+    //     username: ""
+    // }
     
     setUsername = (username) => this.setState({username: username})
 

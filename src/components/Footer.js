@@ -4,7 +4,7 @@ import '../fonts/Billabong.ttf'
 const Footer = () => {
     return (
         <div className='Footer'>
-            <h6>Made with ❤️ in New York City. Copyright 2020 Dwane Richards. All rights reserved. </h6>
+            <p>© 2021 Dwane Richards. Made with ❤️ in New York City. All rights reserved.</p>
 
         </div>
     )

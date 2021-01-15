@@ -6,6 +6,9 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case "SET_USERNAME":
+            console.log("setting username in REDUCER")
+            return { ...state, username: action.payload }
         case "ALBUM_SEARCH":
             console.log("reducing")
             return { ...state, albums: action.payload }
@@ -18,11 +21,7 @@ export const reducer = (state = initialState, action) => {
         case "DELETE_ALBUM":
             console.log("DELETING ALBUM IN REDUCER")
             return { ...state, allAlbums: action.payload }
-        case "SET_USERNAME":
-            console.log("setting username in REDUCER")
-            return { ...state, username: action.payload }
         default:
             return state;
     }
-
 }

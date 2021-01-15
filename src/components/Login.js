@@ -37,7 +37,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <p className="Login-component" style={{ color: 'white', fontSize: '40px' }}>The Most <strong>Un</strong>Official <strong>#FanHack </strong> App</p>
+                <p className="Login-component" style={{ color: 'white', fontSize: '75px' }}>The Most <strong>Un</strong>Official <strong>#CoverArtHack </strong> App</p>
 
                 <form >
                     <label>
@@ -65,5 +65,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-// export default withRouter(Login)
 export default connect(mapStateToProps, mapDispatchToProps )(withRouter(Login))

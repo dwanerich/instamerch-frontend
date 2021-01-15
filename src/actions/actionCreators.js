@@ -1,5 +1,5 @@
 
-export const likes = () => ({ type: 'INCREASE_COUNT' })
+// export const likes = () => ({ type: 'INCREASE_COUNT' })
 
 export const setUsername = (value) => {
     console.log("Setting username in action creator")

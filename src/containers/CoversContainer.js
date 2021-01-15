@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import SearchResultsContainer from './SearchResultsContainer'
 import { getAlbums, addAlbum } from '../actions/actionCreators'
 import { withRouter} from 'react-router-dom'
+import ToggleSwitch from '../components/ToggleSwitch'
 
 
 class CoversContainer extends React.Component {
@@ -22,10 +23,12 @@ class CoversContainer extends React.Component {
         return (
             <>
                 <Home />
-                <p>welcome, <strong> {this.props.username}! </strong></p>
+                <ToggleSwitch />
+                
+                <p>welcome, <strong> {this.props.username}!</strong></p>
                 <button onClick={() => this.logOut()}>Logout</button>
 
-                <h1 className="Login-component" style={{ color: "white" }}> </h1>
+                <br /> <br />
 
                 <AlbumCovers allAlbums={this.props.allAlbums} onAddAlbum={this.props.onAddAlbum} />
 
