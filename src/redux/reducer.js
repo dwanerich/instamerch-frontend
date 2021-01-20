@@ -1,3 +1,5 @@
+
+
 const initialState = {
     albums: [],
     allAlbums: { albums: []},
@@ -5,6 +7,7 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, action) => {
+    console.log("REDUCERRRRRRRR")
     switch (action.type) {
         case "SET_USERNAME":
             console.log("setting username in REDUCER")
@@ -21,7 +24,11 @@ export const reducer = (state = initialState, action) => {
         case "DELETE_ALBUM":
             console.log("DELETING ALBUM IN REDUCER")
             return { ...state, allAlbums: action.payload }
+        case "TOGGLE":
+            console.log("TOGGLING ALBUMS")
+            return { ...state, allAlbums: { albums: state.allAlbums.albums.slice().reverse() }}
         default:
             return state;
     }
+
 }

@@ -21,7 +21,7 @@ const Navbar = (props) => {
     }
 
     return (
-        <div className="mr-auto" variant="dark" bg="dark"     >
+        <div style={{fontSize: 26}}className="mr-auto" variant="dark" bg="dark"     >
             <a href="/" onClick={(event) => handleHomeClick(event)}>Home </a>
             <a href="/" onClick={(event) => handleBoardClick(event)}>Board </a>
             <a href="/" onClick={(event) => handleAboutPageClick(event)}>About </a>

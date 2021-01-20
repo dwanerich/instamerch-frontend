@@ -15,8 +15,8 @@
 }
 
 .App-logo {
-  margin-top: 5rem;
-  height: 30vmin;
+  margin-top: 4rem;
+  height: 22vmin;
   pointer-events: none;
   font-family: 'Billabong';
 }
@@ -80,20 +80,19 @@ body, html {
 .small-card {
   width: 30px;
   height: 300px;
-  text-align:center;
-  position: static;
-  display: -moz-inline-grid;
+  display: inline;
+  /* position: static; */
 }
 
 .small-card img {
-  width: 200px;
+  width: 300px;
   border: rgb(49, 193, 250) solid 1.5px;
   
 
 }
 
 .liked-by-text {
-  position: relative;
+  position: static;
   right: 250px;
   top: 140px;
 }

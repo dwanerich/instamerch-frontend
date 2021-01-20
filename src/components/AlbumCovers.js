@@ -3,6 +3,9 @@ import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux'
 import { getAllAlbums, onDeleteAlbum } from '../actions/actionCreators'
 import  AlbumCover  from './AlbumCover'
+import { Switch } from 'antd'
+import {toggle} from '../actions/actionCreators'
+
 
 class AlbumCovers extends React.Component {
     state = {
@@ -24,6 +27,13 @@ class AlbumCovers extends React.Component {
         console.log(this.state);
         return (
             <div>
+
+                {/* <strong onChange={() => this.props.onToggle()}>CLICK TO</strong> <br /> */}
+
+                {/* <strong onClick={() => this.props.onToggle()}>TOGGLE</strong> */}
+
+                <Switch onChange={() => this.props.onToggle()} /> <br /> <br />
+
                 {
                     this.state.allAlbums && this.state.allAlbums["albums"].map((album, i) => {
                         return (
@@ -39,7 +49,8 @@ class AlbumCovers extends React.Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         onGetAllAlbums: () => dispatch(getAllAlbums()),
-        onDeleteAlbum: (album) => dispatch(onDeleteAlbum(album))
+        onDeleteAlbum: (album) => dispatch(onDeleteAlbum(album)),
+        onToggle: () => dispatch(toggle)
     }
 }
 const mapStateToProps = (state) => {

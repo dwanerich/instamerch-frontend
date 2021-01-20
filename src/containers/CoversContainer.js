@@ -5,10 +5,12 @@ import { connect } from 'react-redux'
 import SearchResultsContainer from './SearchResultsContainer'
 import { getAlbums, addAlbum } from '../actions/actionCreators'
 import { withRouter} from 'react-router-dom'
-import ToggleSwitch from '../components/ToggleSwitch'
+
 
 
 class CoversContainer extends React.Component {
+
+
 
     logOut = () => {
         this.props.history.push("/")
@@ -23,7 +25,6 @@ class CoversContainer extends React.Component {
         return (
             <>
                 <Home />
-                <ToggleSwitch />
                 
                 <p>welcome, <strong> {this.props.username}!</strong></p>
                 <button onClick={() => this.logOut()}>Logout</button>
@@ -60,7 +61,7 @@ class CoversContainer extends React.Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         onGetAlbums: (value) => { dispatch(getAlbums(value)) },
-        onAddAlbum: (value) => { dispatch(addAlbum(value)) },
+        onAddAlbum: (value) => { dispatch(addAlbum(value)) }
     }
 }
 

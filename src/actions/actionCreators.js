@@ -1,6 +1,4 @@
 
-// export const likes = () => ({ type: 'INCREASE_COUNT' })
-
 export const setUsername = (value) => {
     console.log("Setting username in action creator")
     return (dispatch) => {
@@ -83,4 +81,7 @@ export const onDeleteAlbum = (album) => {
                 console.error('ERROR:', error);
             });
     }
+}
+export const toggle = (dispatch) => {
+        dispatch({ type: "TOGGLE", payload: {} })
 }

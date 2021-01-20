@@ -19,7 +19,7 @@ class ToggleSwitch extends React.Component {
         return (
             <div onClick={this.handleClick} className="ToggleSwitch">
                 <div className={this.state.isToggleOn ? 'knob active' : 'knob'} />
-                {this.state.isToggleOn ? 'now it\'s on' : 'now it\'s off'}
+                {this.state.isToggleOn ? 'toggle me' : 'un-toggle'}
             </div>
         )
     }
