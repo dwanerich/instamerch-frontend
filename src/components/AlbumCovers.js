@@ -28,10 +28,6 @@ class AlbumCovers extends React.Component {
         return (
             <div>
 
-                {/* <strong onChange={() => this.props.onToggle()}>CLICK TO</strong> <br /> */}
-
-                {/* <strong onClick={() => this.props.onToggle()}>TOGGLE</strong> */}
-
                 <Switch onChange={() => this.props.onToggle()} /> <br /> <br />
 
                 {
