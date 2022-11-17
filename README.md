@@ -1,64 +1,75 @@
-# README
+# Getting Started with Instacover React App
 
-INSTACOVER APP
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The Application was inspired by the love for music, album cover and art.
-Instacover is a clean, fun single page application(SPA) showcasing backend logic, AJAX requests, DOM manipulation & third party Spotify API utilization.
+## Available Scripts
 
-INSTACOVER is an application that allows users to register, search album covers by artist name or album & instantly add this album to a board displayed and viewable to all users & loves of great cover art.
+In the project directory, you can run:
 
-Albums consists of a "title" an "image url" and a "liked by" attribute. 
+### `yarn start`
+### 'redux install'
+### 'react-redux install'
+### 'redux install'
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Getting Started:
-Visit github.com/dwanerich/instamerch-frontend & instamerch-backend clone the repository to your desktop. Open in your editor and run bundle install from backend directory & npm or yarn install from frontend.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Prerequisites:
-Text Editor ie: Atom, VS Code.
+### `yarn test`
 
-Built With:
--Ruby on Rails API - Framework
--Rspotify Gem (Spotify API request handler)
--React.js 
--Redux
--React-Redux
--Redux-Thunk (Middleware)
--SQLite
--HTML 5
--CSS
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `yarn build`
 
-Test App:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Run npm or yarn start from frontend directory in your terminal.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Run rails s in your terminal from backend directory and copy & paste localhost:3000 local host code into your browser.
-
-"InstaCover"
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-Building Blocks:
+### `yarn eject`
 
-Ruby on Rails
--generated albums model, controller & routes on Rails backend also Spotify search Run Model via Rspotify Gem.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-React / Redux
--index.js
--App.js
--App.css
--Containers
--Components
--Reducer
--ActionCreators
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Contributing:
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Author:
-Dwane Richards
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-License:
-This project is licensed under the MIT License - see the LICENSE.md file for details
+## Learn More
 
-Acknowledgments:
-Shout out to my Flatiron School technical lead Nicky Dover & The Pandemic Cohort.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# instacover-frontend
